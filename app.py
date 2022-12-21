@@ -130,7 +130,7 @@ with st.sidebar:
 if selected == "Welcome":
     st.markdown("<h1 style='text-align: center; color: white;'>Big Mac Price Data &#x1F354;</h1>",
                 unsafe_allow_html=True)
-    anime = load_lottiefile(pm.json_path)
+    anime = load_lottiefile("burger.json")
     st_lottie(anime, height=300, loop=False)
     st.markdown(
         '<p style="text-align: center;">The comparison in cost of Big Macs between nations has been used in the past to measure '

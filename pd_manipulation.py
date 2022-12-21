@@ -1,14 +1,9 @@
 import pandas as pd  # importing pandas for data manipulation/ aggregation
 from datetime import datetime
 from statistics import mean  # from statistics package importing mean to calc means
-import os
-from dotenv import load_dotenv
+from Oooosecrets import load_creds
 
-load_dotenv()
-filename = os.getenv("BMPATH")
-json_path = os.getenv("JSPATH")
-
-
+filename = load_creds.filename
 def set_pd():
     """
     function: cleans csv file and creates new columns using pandas
