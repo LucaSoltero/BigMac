@@ -8,7 +8,6 @@ import json
 from datetime import datetime
 
 
-
 def get_locales():
     """
     obtains unique countries from pandas df
@@ -128,7 +127,7 @@ with st.sidebar:
                            options=["Welcome", "Data by Country", "Average Price Data", "Regression Model"])
 
 if selected == "Welcome":
-    st.markdown("<h1 style='text-align: center; color: white;'>Big Mac Price Data &#x1F354;</h1>",
+    st.markdown("<h1 style='text-align: center; color: black;'>Big Mac Price Data &#x1F354;</h1>",
                 unsafe_allow_html=True)
     anime = load_lottiefile("burger.json")
     st_lottie(anime, height=300, loop=False)
@@ -137,10 +136,9 @@ if selected == "Welcome":
         'whether market exchange rates for different countries currencies are either over or undervalued. '
         'In 1986 The Economist coined the term "Big Mac Price Index" as a simple guide to examine the state of a nations '
         'currency, basing itself on the Macroeconomic Theory of Purchasing Power Parity. This web app visualizes data about '
-        'Big Mac Prices from 76 countries worldwide and shows international economic trends like inflation and disparities '
+        'Big Mac Prices from 73 countries worldwide and shows international economic trends like inflation and disparities '
         'in consumer purchasing power between nations.'
         '</p>', unsafe_allow_html=True)
-
 
 if selected == "Data by Country":
     st.header("Data By Country " + page_icon)
@@ -151,8 +149,9 @@ if selected == "Data by Country":
             st.image(fig(country))
 
 if selected == "Average Price Data":
-    st.header("Worldwide Average Big Mac Prices " + page_icon)
+    st.header("Worldwide Average Big Mac Price Data :hamburger:")
     st.image(avg_fig())
+
 
 if selected == "Regression Model":
     st.header("Simple Linear Regression Model :hamburger:")

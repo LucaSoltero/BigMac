@@ -3,6 +3,8 @@ from datetime import datetime
 from statistics import mean  # from statistics package importing mean to calc means
 
 filename = "BigmacPrice.csv"
+
+
 def set_pd():
     """
     function: cleans csv file and creates new columns using pandas
@@ -72,13 +74,11 @@ def get_pairs(locale):
     dates = c["date"]
     local_price = c["local_price"]
     currency_code = c["currency_code"]
-    dollar_ex = c["dollar_ex"]
 
     x_dates = dates.get_group(locale)
     y_prices = dollar_price.get_group(locale)
     local_p = local_price.get_group(locale)
     curr_code = currency_code.get_group(locale)
-    mac_index = dollar_ex.get_group(locale)
 
     xd = [i for i in x_dates]
     yp = [p for p in y_prices]
@@ -95,8 +95,6 @@ def get_np_pairs(locale):
     xd = dates.get_group(locale)
     yp = dollar_price.get_group(locale)
     return xd, yp
-
-
 
 
 def main():
